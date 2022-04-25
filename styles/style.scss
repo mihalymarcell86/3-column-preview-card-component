@@ -14,7 +14,6 @@ body {
 }
 
 .card {
-  align-self: flex-start;
   display: flex;
   flex-direction: column;
   border-radius: 8px;
@@ -95,6 +94,7 @@ body {
 
 .attribution {
   position: absolute;
+  bottom: 1em;
   font-size: 11px;
   text-align: center;
   z-index: -1;
