@@ -11,6 +11,9 @@ body {
   justify-content: center;
   align-items: center;
   padding: 88px 24px;
+  @media (min-width: $breakpoint) {
+    padding-top: 0;
+  }
 }
 
 .card {
@@ -21,8 +24,8 @@ body {
   max-width: 350px;
   @media (min-width: $breakpoint) {
     flex-direction: row;
-    justify-content: center;
     max-width: 920px;
+    margin-top: math.div(171vh, 8);
   }
 }
 
