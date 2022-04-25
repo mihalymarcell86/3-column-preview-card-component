@@ -36,7 +36,6 @@ body {
   .card {
     flex-direction: row;
     max-width: 920px;
-    margin-top: 21.375vh;
   }
 }
 
