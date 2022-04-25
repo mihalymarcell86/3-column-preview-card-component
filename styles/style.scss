@@ -1,0 +1,104 @@
+@use "sass:math";
+@use "variables" as *;
+@use "functions" as *;
+
+@include setup;
+body {
+  font-family: "Lexend Deca";
+  background-color: color(very-light-gray);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 88px 24px;
+}
+
+.card {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 350px;
+  @media (min-width: $breakpoint) {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 920px;
+  }
+}
+
+.card__section {
+  padding: 48px 48px;
+  @media (min-width: $breakpoint) {
+    width: 33.33%;
+  }
+}
+
+.section--sedans {
+  background-color: color(bright-orange);
+}
+
+.section--suvs {
+  background-color: color(dark-cyan);
+}
+
+.section--luxury {
+  background-color: color(very-dark-cyan);
+}
+
+.card__icon {
+  margin-bottom: 35px;
+}
+
+.card__heading {
+  font-family: "Big Shoulders Display";
+  @include setFont(rem(40px), 47.88, 700);
+  color: color(very-light-gray);
+  text-transform: uppercase;
+  margin-bottom: em(25px, 40px);
+}
+
+.card__paragraph {
+  @include setFont(rem(15px), 25);
+  color: color(transparent-white);
+  margin-bottom: em(25px, 15px);
+  @media (min-width: $breakpoint) {
+    margin-bottom: em(83px, 15px);
+  }
+}
+
+.card__button {
+  @include setFont(rem(15px), 25);
+  border: 0;
+  padding: em(11px, 15px) em(31.5px, 15px);
+  border-radius: 25px;
+  background-color: color(very-light-gray);
+  border: 2px solid color(very-light-gray);
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    color: color(very-light-gray);
+  }
+}
+
+.button--sedans {
+  color: color(bright-orange);
+}
+
+.button--suvs {
+  color: color(dark-cyan);
+}
+
+.button--luxury {
+  color: color(very-dark-cyan);
+}
+
+.attribution {
+  position: absolute;
+  font-size: 11px;
+  text-align: center;
+  z-index: -1;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
