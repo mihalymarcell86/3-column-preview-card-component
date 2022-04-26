@@ -6,13 +6,13 @@
 body {
   font-family: "Lexend Deca";
   background-color: color(very-light-gray);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 88px 24px;
   @media (min-width: $breakpoint) {
-    padding-top: 0;
+    padding: 0 24px;
   }
 }
 
@@ -24,8 +24,8 @@ body {
   max-width: 350px;
   @media (min-width: $breakpoint) {
     flex-direction: row;
-    max-width: 920px;
-    margin-top: math.div(171vh, 8);
+    justify-content: center;
+    max-width: rem(920px);
   }
 }
 
@@ -76,6 +76,7 @@ body {
   border-radius: 25px;
   background-color: color(very-light-gray);
   border: 2px solid color(very-light-gray);
+  transition: all 0.1s ease-in;
   cursor: pointer;
   &:hover {
     background-color: transparent;

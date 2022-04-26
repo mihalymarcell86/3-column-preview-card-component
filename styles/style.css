@@ -13,7 +13,7 @@
 body {
   font-family: "Lexend Deca";
   background-color: hsl(0deg, 0%, 95%);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@ body {
 }
 @media (min-width: 800px) {
   body {
-    padding: 0;
+    padding: 0 24px;
   }
 }
 
@@ -35,7 +35,8 @@ body {
 @media (min-width: 800px) {
   .card {
     flex-direction: row;
-    max-width: 920px;
+    justify-content: center;
+    max-width: 61.3333333333rem;
   }
 }
 
@@ -94,6 +95,7 @@ body {
   border-radius: 25px;
   background-color: hsl(0deg, 0%, 95%);
   border: 2px solid hsl(0deg, 0%, 95%);
+  transition: all 0.1s ease-in;
   cursor: pointer;
 }
 .card__button:hover {
